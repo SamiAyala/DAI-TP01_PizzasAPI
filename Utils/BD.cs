@@ -9,41 +9,41 @@ using Dapper;
 using Pizzas.API.Models;
 
 
-namespace Pizzas.API.Utils{
+namespace Pizzas.API.Utils
+{
     public static class BD
     {
 
-        private static string CONNECTION_STRING = "Data Source=A-PHZ2-AMI-008;Initial Catalog=master;Integrated Security=True";
+        private static string CONNECTION_STRING=@"Server=A-PHZ2-AMI-008;DataBase=Pizzas;Trusted_Connection=True;";
 
         public static List<Pizza> GetAll()
         {
 
             string sqlQuery;
 
-            List<Pizza> listaPizzas;
+            List<Pizza> listaPizza;
 
-            listaPizzas = new List<Pizza>();
+            listaPizza = new List<Pizza>();
 
             using (SqlConnection db = new SqlConnection(CONNECTION_STRING))
             {
 
-                sqlQuery = "SELECT Id, Nombre, LibreGluten, Importe, Descripcion FROM Pizzas";
+                sqlQuery = "SELECT * FROM Pizzas";
 
-                listaPizzas = db.Query<Pizza>(sqlQuery).ToList();
+                listaPizza = db.Query<Pizza>(sqlQuery).ToList();
 
             }
 
-            return listaPizzas;
+            return listaPizza;
 
         }
         public static Pizza GetById(int id)
         {
-
             string sqlQuery;
 
             Pizza pedido = null;
 
-            sqlQuery = "SELECT Id, Nombre, LibreGluten, Importe, Descripcion FROM Pizzas ";
+            sqlQuery = "SELECT * FROM Pizzas ";
 
             sqlQuery += "WHERE Id = @idPizza";
 
@@ -57,7 +57,7 @@ namespace Pizzas.API.Utils{
             return pedido;
 
         }
-        public static int Insert(Pizza pizza)
+        public static int CreatePizza(Pizza pizza)
         {
 
             string sqlQuery;
@@ -98,77 +98,67 @@ namespace Pizzas.API.Utils{
 
             return cantCambios;
         }
-        public static int UpdateById(Pizza pizza) {
+        public static int UpdateById(Pizza pizza)
+        {
 
-    string sqlQuery;
+            string sqlQuery;
 
-    int cantCambios = 0;
+            int cantCambios = 0;
 
-    sqlQuery = "UPDATE Pizzas SET ";
+            sqlQuery = "UPDATE Pizzas SET ";
 
-    sqlQuery += " Nombre = @nombre, ";
+            sqlQuery += " Nombre = @nombre, ";
 
-    sqlQuery += " LibreGluten = @libreGluten, ";
+            sqlQuery += " LibreGluten = @libreGluten, ";
 
-    sqlQuery += " Importe = @importe, ";
+            sqlQuery += " Importe = @importe, ";
 
-    sqlQuery += " Descripcion = @descripcion ";
+            sqlQuery += " Descripcion = @descripcion ";
 
-    sqlQuery += "WHERE Id = @idPizza";
+            sqlQuery += "WHERE Id = @idPizza";
 
-    using (var db = new SqlConnection(CONNECTION_STRING)) {
+            using (var db = new SqlConnection(CONNECTION_STRING))
+            {
 
-    cantCambios = db.Execute(sqlQuery, new {
+                cantCambios = db.Execute(sqlQuery, new
+                {
 
-    idPizza = pizza.Id,
+                    idPizza = pizza.Id,
 
-    nombre = pizza.Nombre,
+                    nombre = pizza.Nombre,
 
-    libreGluten = pizza.LibreGluten,
+                    libreGluten = pizza.LibreGluten,
 
-    importe = pizza.Importe,
+                    importe = pizza.Importe,
 
-    descripcion = pizza.Descripcion
+                    descripcion = pizza.Descripcion
 
-    }
+                }
 
-    );
+                );
 
-    }
+            }
 
-    return cantCambios;
-    }
-    public static int DeleteById(int id) {
+            return cantCambios;
+        }
+        public static int DeleteById(int id)
+        {
 
-    string sqlQuery;
+            string sqlQuery;
 
-    int cantCambios = 0;
+            int cantCambios = 0;
 
-    sqlQuery = "DELETE FROM Pizzas WHERE Id = @idPizza";
+            sqlQuery = "DELETE FROM Pizzas WHERE Id = @idPizza";
 
-    using (SqlConnection db = new SqlConnection(CONNECTION_STRING)) {
+            using (SqlConnection db = new SqlConnection(CONNECTION_STRING))
+            {
 
-    cantCambios = db.Execute(sqlQuery, new { idPizza = id });
+                cantCambios = db.Execute(sqlQuery, new { idPizza = id });
 
-    }
+            }
 
-    return cantCambios;
+            return cantCambios;
 
-    }
-    [HttpGet]
-
-    public IActionResult GetAll() {
-
-    IActionResult respuesta;
-
-    List<Pizza> entityList;
-
-    entityList = BD.GetAll();
-
-    respuesta = Ok(entityList);
-
-    return respuesta;
-
-    }
+        }
     }
 }
