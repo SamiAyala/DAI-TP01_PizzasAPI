@@ -685,11 +685,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\47128045\\Pizzas.api\\Pizzas.api.csproj",
+      "projectUniqueName": "C:\\Users\\47128045\\DAI-TP01_PizzasAPI\\Pizzas.api.csproj",
       "projectName": "Pizzas.api",
-      "projectPath": "C:\\Users\\47128045\\Pizzas.api\\Pizzas.api.csproj",
+      "projectPath": "C:\\Users\\47128045\\DAI-TP01_PizzasAPI\\Pizzas.api.csproj",
       "packagesPath": "C:\\Users\\47128045\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\47128045\\Pizzas.api\\obj\\",
+      "outputPath": "C:\\Users\\47128045\\DAI-TP01_PizzasAPI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

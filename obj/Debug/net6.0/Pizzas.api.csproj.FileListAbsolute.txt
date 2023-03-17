@@ -32,3 +32,13 @@ C:\Users\47128045\Pizzas.api\obj\Debug\net6.0\refint\Pizzas.api.dll
 C:\Users\47128045\Pizzas.api\obj\Debug\net6.0\Pizzas.api.pdb
 C:\Users\47128045\Pizzas.api\obj\Debug\net6.0\Pizzas.api.genruntimeconfig.cache
 C:\Users\47128045\Pizzas.api\obj\Debug\net6.0\ref\Pizzas.api.dll
+C:\Users\47128045\DAI-TP01_PizzasAPI\obj\Debug\net6.0\Pizzas.api.csproj.AssemblyReference.cache
+C:\Users\47128045\DAI-TP01_PizzasAPI\obj\Debug\net6.0\Pizzas.api.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\47128045\DAI-TP01_PizzasAPI\obj\Debug\net6.0\Pizzas.api.AssemblyInfoInputs.cache
+C:\Users\47128045\DAI-TP01_PizzasAPI\obj\Debug\net6.0\Pizzas.api.AssemblyInfo.cs
+C:\Users\47128045\DAI-TP01_PizzasAPI\obj\Debug\net6.0\Pizzas.api.csproj.CoreCompileInputs.cache
+C:\Users\47128045\DAI-TP01_PizzasAPI\obj\Debug\net6.0\Pizzas.api.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\47128045\DAI-TP01_PizzasAPI\obj\Debug\net6.0\Pizzas.api.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\47128045\DAI-TP01_PizzasAPI\obj\Debug\net6.0\Pizzas.api.dll
+C:\Users\47128045\DAI-TP01_PizzasAPI\obj\Debug\net6.0\refint\Pizzas.api.dll
+C:\Users\47128045\DAI-TP01_PizzasAPI\obj\Debug\net6.0\Pizzas.api.pdb
