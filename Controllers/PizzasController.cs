@@ -5,14 +5,9 @@ using Pizzas.API.Utils;
 namespace Pizzas.Controllers;
 
 [ApiController]
-[Route("[controller]")]
+[Route("[Controller]")]
 public class PizzasController : ControllerBase
 {
-    private static readonly string[] Summaries = new[]
-    {
-        "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-    };
-
     private readonly ILogger<PizzasController> _logger;
 
     public PizzasController(ILogger<PizzasController> logger)
